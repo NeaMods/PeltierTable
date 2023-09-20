@@ -1,7 +1,8 @@
 # TEC Stage   [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
-A custom made AFM table with a Peltier element for heating/cooling.
 
-This mod uses commerical Peltier elements and a laser-head temperature regulation electronics to replace the standard AFM table.
+A custom made AFM table with a thermoelectric element for heating/cooling.
+
+This mod uses commerical TEC elements and controller electronics to implement a temperature controlled sample stage.
 
 ## Parts list
 
