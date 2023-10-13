@@ -1,0 +1,18 @@
+# Images #
+##########
+*.png
+
+# Peltier init file #
+#####################
+tecd2s_parameters.ini
+tecf2s.ini
+
+# zip and rar files #
+#####################
+*.zip
+*.rar
+
+# misc files #
+##############
+PyController.py
+*.f3z
