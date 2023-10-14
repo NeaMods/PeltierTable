@@ -27,10 +27,10 @@ The Peltier elements are controlled with a Meerstetter TEC-1091 precision Peltie
 For easy customization and assembly, we use the screw terminal block version. For the temperature sensor, we use Pt1000 RTD (https://uk.rs-online.com/web/p/rtd-sensors/1699928). 
 
 #### 3D printed box for the electronics
-You will find the STL file to print the box to house the electronic board and the connections. 
+You will find the STL file to 3D print the box to house the electronic board and the connections. 
 
 Our version looks like this:
-![cad_design](https://github.com/ngergihun/NeaHeater/assets/46405959/dd47e703-56ea-4ad6-a807-685409c23fa3)
+![cad_design](/Images/cad_design.png)
 
 #### Connectors
 
@@ -54,12 +54,12 @@ The CAD files to build the sample stage with two, replaceable Peltier elements a
 In v1.0 we modified a commercial heatsink from RS (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b) to dissipate the heat when cooling. The heatsink is integrated with the sample stage as the image shows below.
 
 Our version looks like this:
-![stage](https://github.com/ngergihun/NeaHeater/assets/46405959/93833f7a-51d5-4ff5-b715-353395c67578)
+![stage](/Images/heaterStage_hardware.ong)
 
 ## Performance
 
 The image below shows the temperature response and stability of the heating stage.
-![controllapp_new](https://github.com/ngergihun/NeaHeater/assets/46405959/006a6c4e-7ad7-4370-bae9-1befce0d38d5)
+![controllapp_new](/Images/controlapp_new.png)
 
 ### License
 
