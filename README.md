@@ -1,10 +1,11 @@
 # NeaHeater   [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-Heater/Cooler stage control software and design files for neaSNOM/neaSCOPE microscopes
+Heater/Cooler stage control software and design files for neaSNOM/neaSCOPE microscopes. We provide both software and hardware design to build your own neaSNOM sample stage with heating/cooling.
+The design is flexible and thus can be modified to fit other instruments.
 
 ## Software installation
 
-Launch the main application file: **heaterApp.py**
+We provide an easy-to-use, user-friendly software to control the Peltier stage. Launch the main application file: **heaterApp.py**
 
 This software was designed to run on Windows 10. However, we used Python modules that should allow cross-platform 
 operation.
