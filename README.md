@@ -9,7 +9,7 @@ operation.
 
 Requirements can be found in the `requirements.txt` file.
 
-The Python module for the communication protocol of the Controller has to be installed from **(https://github.com/spomjaksilp/pyMeCom)**
+The Python module for the communication protocol of the Controller has to be installed from [pyMeCom](https://github.com/spomjaksilp/pyMeCom)
 
 ## Parts list
 - Custom-made microscope stage: aluminum frame (.stl file) + heatsink (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b)
