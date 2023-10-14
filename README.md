@@ -16,7 +16,7 @@ Requirements can be found in the `requirements.txt` file.
 The Python module for the communication protocol of the Controller has to be installed from **(https://github.com/spomjaksilp/pyMeCom)**
 
 ## Parts list
-- Custom-made microscope stage: aluminum frame (.stl file) + heatsink (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b)
+- Custom-made microscope stage: aluminum frame (frame.stl file) + heatsink (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b)
 - Peltier element (Thorlabs TECD2S and TECF2S)
 - Peltier/TEC controller (Meerstetter TEC-1091 (±4 A / ±21 V))
 - Plastic box with connectors (ElectronicsBox.stl and topCover.stl file)
@@ -50,8 +50,8 @@ Our version looks like this (colors and pins do not correspond to the design fig
 
 In v1.0 we can accommodate two Peltier elements that we purchased from Thorlabs.
 
--TECD2S: https://www.thorlabs.com/thorproduct.cfm?partnumber=TECD2S
--TECF2S: https://www.thorlabs.com/thorproduct.cfm?partnumber=TECF2S
+- TECD2S: https://www.thorlabs.com/thorproduct.cfm?partnumber=TECD2S
+- TECF2S: https://www.thorlabs.com/thorproduct.cfm?partnumber=TECF2S
 
 ### Custom-made NeaSCOPE sample stage
 
