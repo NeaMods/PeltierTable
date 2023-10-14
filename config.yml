@@ -1,8 +1,0 @@
-translateUI:
-    ui_file: 'D:\\OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem\\SOLEIL\\Projects\\SNOM-upgrades\\HeaterStage\\heaterApp.ui'
-    py_file: 'D:\\OneDrive - Budapesti Műszaki és Gazdaságtudományi Egyetem\\SOLEIL\\Projects\\SNOM-upgrades\\HeaterStage\\ui_heaterApp.py'
-    uic_file: 'C:\\Users\\Gergi\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\PySide6\\uic.exe'
-
-other_group:
-    other_key1: other1
-    other_key2: other2

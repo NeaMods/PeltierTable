@@ -143,9 +143,9 @@ class Ui_MainWindow(object):
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Control", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Current (A)", None))
         self.ResetButton.setText(QCoreApplication.translate("MainWindow", u"Reset", None))
-        self.radioButton_C.setText(QCoreApplication.translate("MainWindow", u"C", None))
-        self.radioButton_F.setText(QCoreApplication.translate("MainWindow", u"F", None))
-        self.radioButton_K.setText(QCoreApplication.translate("MainWindow", u"K", None))
+        self.radioButton_C.setText(QCoreApplication.translate("MainWindow", u"\u00baC", None))
+        self.radioButton_F.setText(QCoreApplication.translate("MainWindow", u"\u00baF", None))
+        self.radioButton_K.setText(QCoreApplication.translate("MainWindow", u"\u00baK", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Units", None))
     # retranslateUi
 

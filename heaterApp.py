@@ -4,7 +4,6 @@ from PySide6 import QtWidgets
 from PySide6.QtWidgets import QMessageBox
 from PySide6 import QtCore, QtGui
 from PySide6.QtCore import QTimer
-#from qtwidgets import Toggle
 from toggleButton import Toggle
 import numpy as np
 from mecom import MeCom, ResponseException, WrongChecksum

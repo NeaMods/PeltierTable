@@ -1,18 +1,14 @@
-# AUTOTRANSLATE the ui file for PySide
+# AUTOTRANSLATE the ui file for PySide6 with pyside6-uic
 import subprocess
-import yaml
+import os
 
-with open("config.yml", "r") as ymlfile:
-    cfg = yaml.load(ymlfile, Loader=yaml.Loader)
+current_folder = os.getcwd()
+ui_file = os.path.join(current_folder,'heaterApp.ui')
+py_file = os.path.join(current_folder,'ui_heaterApp.py')
 
-print(cfg["translateUI"]["ui_file"])
-
-ui_file = cfg["translateUI"]["ui_file"]
-py_file = cfg["translateUI"]["py_file"]
-uic_file = cfg["translateUI"]["uic_file"]
-
-# Run pyside2-uic command to generate the Python module from the UI file
+# Run pyside6-uic command to generate the Python module from the UI file
 try:
-    subprocess.run([uic_file, ui_file, '-g', 'python', '-o', py_file])
+    subprocess.run(['pyside6-uic', ui_file,'-o', py_file], check=True)
+    print("GUI translated to file: ",py_file)
 except:
     print("There was a problem with translating the GUI.")
