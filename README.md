@@ -53,6 +53,14 @@ In v1.0 we can accommodate two Peltier elements that we purchased from Thorlabs.
 - TECD2S: https://www.thorlabs.com/thorproduct.cfm?partnumber=TECD2S
 - TECF2S: https://www.thorlabs.com/thorproduct.cfm?partnumber=TECF2S
 
+⚠️⚠️⚠️ In order to properly drive the Peltier elements, you have to give their characteristics and electronic properties (such as maximum current, resistance, voltage) to the TEC controller.⚠️⚠️⚠️
+
+Here we provide the configuration files for our stage/peltier combinations. The configuration files can be written to the TEC controller via the **TEC Service Software** from Meerstetter's website (https://www.meerstetter.ch/products/tec-controllers/tec-1091) from the related downloads/software panel.
+
+We provide here the two config files in this repository /Software/tecd2s_parameters.ini and /Software/tecf2s_parameters.ini
+
+❗❗❗ Important to note: there is a possibility you have to retune the PID parameters of the control. You can do this by utilizing the autotune option of the TEC Service Software. For more information see the controller manual. ❗❗❗
+
 ### Custom-made NeaSCOPE sample stage
 
 The CAD files to build the sample stage with two, replaceable Peltier elements are located in the CAD directory. 
