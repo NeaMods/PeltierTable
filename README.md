@@ -39,7 +39,7 @@ We used a D-Sub 9 pins connector for both terminals, thus all GPIO and sensor pi
 #### Wiring
 
 The wiring between the controller pins and the D-Sub 9 pins pins is arbitrary. Here is an example of our design for the sensor pins/D-Sub layout.
-![wiring](https://github.com/OpenModHub/TECStage/blob/master/Images/TECcontroller_wiring.png)
+![wiring](https://github.com/ngergihun/TECStage/blob/master/Images/TECcontroller_wiring.png)
 
 ### Peltier elements
 
