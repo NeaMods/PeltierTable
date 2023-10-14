@@ -1,3 +1,4 @@
+
 # NeaHeater   [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 Heater/Cooler stage control software and design files for neaSNOM/neaSCOPE microscopes. We provide both software and hardware design to build your own neaSNOM sample stage with heating/cooling.
@@ -14,17 +15,20 @@ operation.
 
 Requirements can be found in the `requirements.txt` file.
 
-The Python module for the communication protocol of the Controller has to be installed from **(https://github.com/spomjaksilp/pyMeCom)**
+The Python module for the communication protocol of the Controller has to be installed from [pyMeCom](https://github.com/spomjaksilp/pyMeCom)
 
 ## Parts list
+
 - Custom-made microscope stage: aluminum frame (frame.stl file) + heatsink (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b)
 - Peltier element (Thorlabs TECD2S and TECF2S)
 - Peltier/TEC controller (Meerstetter TEC-1091 (±4 A / ±21 V))
 - Plastic box with connectors (ElectronicsBox.stl and topCover.stl file)
 
+
 ## Electronics
 
 ### Thermoelectric controller
+
 The Peltier elements are controlled with a Meerstetter TEC-1091 precision Peltier temperature controller. Product page: https://www.meerstetter.ch/products/tec-controllers/tec-1091
 
 For easy customization and assembly, we use the screw terminal block version. For the temperature sensor, we use Pt1000 RTD (https://uk.rs-online.com/web/p/rtd-sensors/1699928). 
@@ -62,8 +66,6 @@ We provide here the two config files in this repository /Software/tecd2s_paramet
 
 ❗❗❗ Important to note: there is a possibility you have to retune the PID parameters of the control. You can do this by utilizing the autotune option of the TEC Service Software. For more information see the controller manual. ❗❗❗
 
-## Custom-made NeaSCOPE sample stage
-
 The CAD files to build the sample stage with two, replaceable Peltier elements are located in the CAD directory. 
 In v1.0 we modified a commercial heatsink from RS (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b) to dissipate the heat when cooling. The heatsink is integrated with the sample stage as the image shows below.
 
@@ -73,6 +75,7 @@ Our version looks like this:
 ## Performance
 
 The image below shows the temperature response and stability of the heating stage.
+
 ![controllapp_new](/Images/controllapp_new.png)
 
 ## License
