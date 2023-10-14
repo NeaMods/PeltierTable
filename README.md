@@ -22,24 +22,24 @@ The Python module for the communication protocol of the Controller has to be ins
 - Peltier/TEC controller (Meerstetter TEC-1091 (±4 A / ±21 V))
 - Plastic box with connectors (ElectronicsBox.stl and topCover.stl file)
 
-### Device control
+## Electronics
 
-#### Thermoelectric controller
+### Thermoelectric controller
 The Peltier elements are controlled with a Meerstetter TEC-1091 precision Peltier temperature controller. Product page: https://www.meerstetter.ch/products/tec-controllers/tec-1091
 
 For easy customization and assembly, we use the screw terminal block version. For the temperature sensor, we use Pt1000 RTD (https://uk.rs-online.com/web/p/rtd-sensors/1699928). 
 
-#### 3D printed box for the electronics
+### 3D printed box for the electronics
 You will find the STL file to 3D print the box to house the electronic board and the connections. 
 
 Our version looks like this:
 ![cad_design](/Images/cad_design.png)
 
-#### Connectors
+### Connectors
 
 We used a D-Sub 9 pins connector for both terminals, thus all GPIO and sensor pins of the controller are available and accessible through the two D-Sub 9 pins ports on the box. The input and the output ports are DC power plugs.
 
-#### Wiring
+### Wiring
 
 The wiring between the controller pins and the D-Sub 9 pins pins is arbitrary. Here is an example of the sensor pins/D-Sub layout.
 ![wiring](/Images/TECcontroller_wiring.png)
@@ -62,7 +62,7 @@ We provide here the two config files in this repository /Software/tecd2s_paramet
 
 ❗❗❗ Important to note: there is a possibility you have to retune the PID parameters of the control. You can do this by utilizing the autotune option of the TEC Service Software. For more information see the controller manual. ❗❗❗
 
-### Custom-made NeaSCOPE sample stage
+## Custom-made NeaSCOPE sample stage
 
 The CAD files to build the sample stage with two, replaceable Peltier elements are located in the CAD directory. 
 In v1.0 we modified a commercial heatsink from RS (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b) to dissipate the heat when cooling. The heatsink is integrated with the sample stage as the image shows below.
@@ -75,7 +75,7 @@ Our version looks like this:
 The image below shows the temperature response and stability of the heating stage.
 ![controllapp_new](/Images/controllapp_new.png)
 
-### License
+## License
 
 This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
