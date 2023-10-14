@@ -1,6 +1,6 @@
-# NeaHeater   [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+# TECStage - Thermoelectric heater/cooler stage   [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-Heater/Cooler stage control software and design files for neaSNOM/neaSCOPE microscopes
+Heater/Cooler stage control software and design files with adaptation to neaSNOM/neaSCOPE microscopes.
 
 ## Software installation
 
