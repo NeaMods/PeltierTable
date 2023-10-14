@@ -38,8 +38,11 @@ We used a D-Sub 9 pins connector for both terminals, thus all GPIO and sensor pi
 
 #### Wiring
 
-The wiring between the controller pins and the D-Sub 9 pins pins is arbitrary. Here is an example of our design for the sensor pins/D-Sub layout.
+The wiring between the controller pins and the D-Sub 9 pins pins is arbitrary. Here is an example for the sensor pins/D-Sub layout.
 ![wiring](/Images/TECcontroller_wiring.png)
+
+Our version looks like this (colors and pins do not correspond to the design figure above):
+![final_box](/Images/final_box.png)
 
 ### Peltier elements
 
@@ -59,7 +62,7 @@ Our version looks like this:
 ## Performance
 
 The image below shows the temperature response and stability of the heating stage.
-![controllapp_new](/Images/controlapp_new.png)
+![controllapp_new](/Images/controllapp_new.png)
 
 ### License
 
