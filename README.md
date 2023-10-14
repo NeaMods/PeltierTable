@@ -4,6 +4,8 @@ Heater/Cooler stage control software and design files for neaSNOM/neaSCOPE micro
 
 ## Software installation
 
+Launch the main application file: **heaterApp.py**
+
 This software was designed to run on Windows 10. However, we used Python modules that should allow cross-platform 
 operation.
 
@@ -38,7 +40,7 @@ We used a D-Sub 9 pins connector for both terminals, thus all GPIO and sensor pi
 
 #### Wiring
 
-The wiring between the controller pins and the D-Sub 9 pins pins is arbitrary. Here is an example for the sensor pins/D-Sub layout.
+The wiring between the controller pins and the D-Sub 9 pins pins is arbitrary. Here is an example of the sensor pins/D-Sub layout.
 ![wiring](/Images/TECcontroller_wiring.png)
 
 Our version looks like this (colors and pins do not correspond to the design figure above):
@@ -57,7 +59,7 @@ The CAD files to build the sample stage with two, replaceable Peltier elements a
 In v1.0 we modified a commercial heatsink from RS (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b) to dissipate the heat when cooling. The heatsink is integrated with the sample stage as the image shows below.
 
 Our version looks like this:
-![stage](/Images/heaterStage_hardware.ong)
+![stage](/Images/heaterStage_hardware.png)
 
 ## Performance
 
