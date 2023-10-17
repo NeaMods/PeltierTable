@@ -1,8 +1,8 @@
 
-# NeaHeater   [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+# TEC sample stage   [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-Heater/Cooler stage control software and design files for neaSNOM/neaSCOPE microscopes. We provide both software and hardware design to build your own neaSNOM sample stage with heating/cooling.
-The design is flexible and thus can be modified to fit other instruments.
+Here, we provide both software and hardware design solutions to build a thermoelectric cooler/heater (TEC) sample stage with precision temperature control.
+The design is flexible and thus can be modified to fit any instrument. Our particular design files show a heater/cooler stage design to fit [neaSNOM/neaSCOPE](https://www.neaspec.com/) microscopes.
 
 ## Software installation
 
