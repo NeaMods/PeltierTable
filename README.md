@@ -24,6 +24,7 @@ The [pyMeCom](https://github.com/spomjaksilp/pyMeCom) Python module for the comm
 ```
 
 Launch the main application file:
+
 ` (<environment_name><environment_name>) > python heaterApp.py`
 
 
