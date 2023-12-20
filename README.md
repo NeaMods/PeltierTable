@@ -13,9 +13,17 @@ operation.
 
 ⚠️ COM port listing: when using other operation systems, please modify the COM port addressing part of the code accordingly
 
-Requirements can be found in the [requirements.txt](Software/requirements.txt) file.
+We suggest to install the software in a new Python environment as follows:
 
-The Python module for the communication protocol of the Controller has to be installed from [pyMeCom](https://github.com/spomjaksilp/pyMeCom)
+`> conda create --name <environment_name> --file requirements.txt`
+
+The [pyMeCom](https://github.com/spomjaksilp/pyMeCom) Python module for the communication protocol of the Controller can be installed with pip
+
+```
+> conda activate <environment_name><environment_name>
+> conda install pip
+> pip install git+https://github.com/spomjaksilp/pyMeCom.git
+```
 
 # Components
 
@@ -38,7 +46,7 @@ For easy customization and assembly, we use the screw terminal block version. Fo
 ### 3D printed box for the electronics
 You will find the STL file to 3D print the box to house the electronic board and the connections. 
 
-Our version looks like this:
+Our implementation looks like this:
 ![cad_design](/Images/cad_design.png)
 
 ### Connectors
