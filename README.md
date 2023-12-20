@@ -1,12 +1,12 @@
 
 # TEC sample stage   [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-Here, we provide both software and hardware design solutions to build a thermoelectric cooler/heater (TEC) sample stage with precision temperature control.
-The design is flexible and thus can be modified to fit any instrument. Our particular design files show a heater/cooler stage design to fit [neaSNOM/neaSCOPE](https://www.neaspec.com/) microscopes.
+Here, we provide software and hardware design to build a thermoelectric cooler/heater (TEC) sample stage with precision temperature control.
+The design is flexible and can be modified to fit any instrument. Our implementation is compatible with [neaSNOM/neaSCOPE](https://www.neaspec.com/) microscopes.
 
 ## Software installation
 
-We provide an easy-to-use, user-friendly software to control the Peltier stage. Launch the main application file: **heaterApp.py**
+Launch the main application file: **heaterApp.py**
 
 This software was designed to run on Windows 10. However, we used Python modules that should allow cross-platform 
 operation.
@@ -17,9 +17,11 @@ Requirements can be found in the `requirements.txt` file.
 
 The Python module for the communication protocol of the Controller has to be installed from [pyMeCom](https://github.com/spomjaksilp/pyMeCom)
 
-## Parts list
+# Components
 
-- Custom-made microscope stage: aluminum frame (frame.stl file) + heatsink (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b)
+## Commercial parts
+
+- Custom-made microscope stage: [aluminum frame](CAD/frame.stl) + heatsink (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b)
 - Peltier element (Thorlabs TECD2S and TECF2S)
 - Peltier/TEC controller (Meerstetter TEC-1091 (±4 A / ±21 V))
 - Plastic box with connectors (ElectronicsBox.stl and topCover.stl file)
@@ -64,17 +66,16 @@ Here we provide the configuration files for our stage/peltier combinations. The 
 
 We provide here the two config files in this repository /Software/tecd2s_parameters.ini and /Software/tecf2s_parameters.ini
 
-❗❗❗ Important to note: there is a possibility you have to retune the PID parameters of the control. You can do this by utilizing the autotune option of the TEC Service Software. For more information see the controller manual. ❗❗❗
+❗ It is likely that you have to retune the PID parameters of the controller. You can do this by using the autotune option of the TEC Service Software. For more information see the controller manual.
 
-The CAD files to build the sample stage with two, replaceable Peltier elements are located in the CAD directory. 
-In v1.0 we modified a commercial heatsink from RS (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b) to dissipate the heat when cooling. The heatsink is integrated with the sample stage as the image shows below.
+The CAD files to build the sample stage with two, replaceable Peltier elements are in the CAD directory. 
+In v1.0 we modified a [commercial heatsink](https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b) to dissipate the heat when cooling, which is integrated with the sample stage as the image shows below.
 
-Our version looks like this:
 ![stage](/Images/heaterStage_hardware.png)
 
 ## Performance
 
-The image below shows the temperature response and stability of the heating stage.
+Temperature response and stability of the heating stage.
 
 ![controllapp_new](/Images/controllapp_new.png)
 
