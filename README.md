@@ -18,14 +18,14 @@ We suggest to install the software in a new Python environment as follows:
 The [pyMeCom](https://github.com/spomjaksilp/pyMeCom) Python module for the communication protocol of the Controller can be installed with pip
 
 ```
-(base) > conda activate <environment_name><environment_name>
-(<environment_name><environment_name>) > conda install pip
-(<environment_name><environment_name>) > pip install git+https://github.com/spomjaksilp/pyMeCom.git
+(base) > conda activate <environment_name>
+(<environment_name>) > conda install pip
+(<environment_name>) > pip install git+https://github.com/spomjaksilp/pyMeCom.git
 ```
 
 Launch the main application file:
 
-` (<environment_name><environment_name>) > python heaterApp.py`
+` (<environment_name>) > python heaterApp.py`
 
 
 # Components
