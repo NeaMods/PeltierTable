@@ -60,13 +60,13 @@ In v1.0 we can accommodate two Peltier elements that we purchased from Thorlabs.
 - TECD2S: https://www.thorlabs.com/thorproduct.cfm?partnumber=TECD2S
 - TECF2S: https://www.thorlabs.com/thorproduct.cfm?partnumber=TECF2S
 
-⚠️⚠️⚠️ In order to properly drive the Peltier elements, you have to give their characteristics and electronic properties (such as maximum current, resistance, voltage) to the TEC controller.⚠️⚠️⚠️
+⚠️ To properly drive the Peltier elements, you have to give their characteristics and electronic properties (such as maximum current, resistance, voltage) to the TEC controller.
 
-Here we provide the configuration files for our stage/peltier combinations. The configuration files can be written to the TEC controller via the **TEC Service Software** from Meerstetter's website (https://www.meerstetter.ch/products/tec-controllers/tec-1091) from the related downloads/software panel.
+Here we provide the configuration files for our stage/peltier combinations. The configuration files can be uploaded to the controller via the [TEC Service Software](https://www.meerstetter.ch/products/tec-controllers/tec-1091) from the related downloads/software panel.
 
 We provide here the two config files in this repository /Software/tecd2s_parameters.ini and /Software/tecf2s_parameters.ini
 
-❗ It is likely that you have to retune the PID parameters of the controller. You can do this by using the autotune option of the TEC Service Software. For more information see the controller manual.
+⚠️ It is likely that you have to retune the PID parameters of the controller. You can do this by using the autotune option of the TEC Service Software. For more information see the controller manual.
 
 The CAD files to build the sample stage with two, replaceable Peltier elements are in the CAD directory. 
 In v1.0 we modified a [commercial heatsink](https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b) to dissipate the heat when cooling, which is integrated with the sample stage as the image shows below.
