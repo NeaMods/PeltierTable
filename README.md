@@ -2,7 +2,7 @@
 # TEC sample stage   [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 Here, we provide software and hardware design to build a thermoelectric cooler/heater (TEC) sample stage with precision temperature control.
-The design is flexible and can be modified to fit any instrument. Our implementation is compatible with [neaSNOM/neaSCOPE](https://www.neaspec.com/) microscopes.
+The design can be modified to fit any instrument. Our implementation is compatible with [neaSNOM/neaSCOPE](https://www.neaspec.com/) microscopes.
 
 ## Software installation
 
@@ -30,12 +30,12 @@ Launch the main application file:
 
 # Components
 
-## Commercial parts
+## Main parts
 
-- Custom-made microscope stage: [aluminum frame](CAD/frame.stl) + heatsink (https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b)
-- Peltier element (Thorlabs TECD2S and TECF2S)
-- Peltier/TEC controller (Meerstetter TEC-1091 (±4 A / ±21 V))
-- Plastic box with connectors (ElectronicsBox.stl and topCover.stl file)
+- Custom-made microscope stage: [aluminum frame](CAD/frame.stl) and [heatsink](https://hu.rs-online.com/web/p/hutobordak/5040772?gb=b)
+- Peltier element (Thorlabs [TECD2S](https://www.thorlabs.com/thorproduct.cfm?partnumber=TECD2S) and [TECF2S](https://www.thorlabs.com/thorproduct.cfm?partnumber=TECF2S))
+- Peltier/TEC controller ([Meerstetter TEC-1091 (±4 A / ±21 V)](https://www.meerstetter.ch/products/tec-controllers/tec-1091))
+- Plastic box with connectors ([ElectronicsBox.stl](CAD/ElectronicsBox.stl) and [topCover.stl](CAD/topCover.stl) file)
 
 
 ## Electronics
