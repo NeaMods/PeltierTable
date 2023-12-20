@@ -6,8 +6,6 @@ The design is flexible and can be modified to fit any instrument. Our implementa
 
 ## Software installation
 
-Launch the main application file: **heaterApp.py**
-
 This software was designed to run on Windows 10. However, we used Python modules that should allow cross-platform 
 operation.
 
@@ -15,15 +13,19 @@ operation.
 
 We suggest to install the software in a new Python environment as follows:
 
-`> conda create --name <environment_name> --file requirements.txt`
+`(base) > conda create --name <environment_name> --file requirements.txt`
 
 The [pyMeCom](https://github.com/spomjaksilp/pyMeCom) Python module for the communication protocol of the Controller can be installed with pip
 
 ```
-> conda activate <environment_name><environment_name>
-> conda install pip
-> pip install git+https://github.com/spomjaksilp/pyMeCom.git
+(base) > conda activate <environment_name><environment_name>
+(<environment_name><environment_name>) > conda install pip
+(<environment_name><environment_name>) > pip install git+https://github.com/spomjaksilp/pyMeCom.git
 ```
+
+Launch the main application file:
+` (<environment_name><environment_name>) > python heaterApp.py`
+
 
 # Components
 
