@@ -11,9 +11,9 @@ Launch the main application file: **heaterApp.py**
 This software was designed to run on Windows 10. However, we used Python modules that should allow cross-platform 
 operation.
 
-⚠️⚠️⚠️COM port listing: when using other operation systems, please modify the COM port addressing part of the code accordingly⚠️⚠️⚠️
+⚠️ COM port listing: when using other operation systems, please modify the COM port addressing part of the code accordingly
 
-Requirements can be found in the `requirements.txt` file.
+Requirements can be found in the [requirements.txt](Software/requirements.txt) file.
 
 The Python module for the communication protocol of the Controller has to be installed from [pyMeCom](https://github.com/spomjaksilp/pyMeCom)
 
