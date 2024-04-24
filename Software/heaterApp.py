@@ -11,6 +11,7 @@ from serial import SerialException
 import serial.tools.list_ports
 import pyqtgraph as pg
 from datetime import datetime
+from qt_material import apply_stylesheet
 
 # Import the generated Python module
 from ui_heaterApp import Ui_MainWindow
@@ -53,6 +54,9 @@ class controlApp(QtWidgets.QMainWindow):
         self.ui.TogglePlaceHolder.addWidget(self.ui.OnLabel)
         self.ui.toggle_power.toggled.connect(self.SwitchControl)
 
+        # setup stylesheet
+        apply_stylesheet(app, theme='light_blue.xml', invert_secondary=True)
+
         #pyqtgraph settings
         self.styles = {'color':'b', 'font-size':'20px'}
         self.ui.PlotArea.setLabel('left', 'Temperature (°C)', **self.styles)
@@ -61,6 +65,7 @@ class controlApp(QtWidgets.QMainWindow):
         self.ui.PlotArea.setAxisItems({'bottom':axis})
         self.ui.PlotArea.setLabel('bottom', 'Time', **self.styles)
         self.ui.PlotArea.showGrid(x=True, y=True)
+        self.ui.PlotArea.setStyleSheet("border: 0px")
 
         self.pen_Tplot = pg.mkPen(color=(0, 0, 0), width=5, style=QtCore.Qt.SolidLine)
 
