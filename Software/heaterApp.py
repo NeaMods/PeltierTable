@@ -6,35 +6,35 @@ from PySide6 import QtCore, QtGui
 from PySide6.QtCore import QTimer
 from toggleButton import Toggle
 import numpy as np
-from mecom import MeCom, ResponseException, WrongChecksum
+from mecom import MeComSerial, ResponseException, WrongChecksum
 from serial import SerialException
 import serial.tools.list_ports
 import pyqtgraph as pg
 from datetime import datetime
-from qt_material import apply_stylesheet
+# from qt_material import apply_stylesheet
 
 # Import the generated Python module
 from ui_heaterApp import Ui_MainWindow
 
 # default queries from command table below
 DEFAULT_QUERIES = [
-    "loop status",
-    "object temperature",
-    "target object temperature",
-    "output current",
-    "output voltage"
+    "Temperature is Stable",
+    "Object Temperature",
+    "Target Object Temperature",
+    "Actual Output Current",
+    "Actual Output Voltage"
 ]
 
 # syntax
 # { display_name: [parameter_id, unit], }
 COMMAND_TABLE = {
-    "loop status": [1200, ""],
-    "object temperature": [1000, "degC"],
-    "target object temperature": [1010, "degC"],
-    "output current": [1020, "A"],
-    "output voltage": [1021, "V"],
-    "sink temperature": [1001, "degC"],
-    "ramp temperature": [1011, "degC"],
+    "Temperature is Stable": [1200, ""],
+    "Object Temperature": [1000, "degC"],
+    "Target Object Temperature": [3000, "degC"],
+    "Actual Output Current": [1020, "A"],
+    "Actual Output Voltage": [1021, "V"],
+    "Sink Temperature": [1001, "degC"],
+    "Ramp Object Temperature": [1011, "degC"],
 }
 
 class controlApp(QtWidgets.QMainWindow):
@@ -55,7 +55,7 @@ class controlApp(QtWidgets.QMainWindow):
         self.ui.toggle_power.toggled.connect(self.SwitchControl)
 
         # setup stylesheet
-        apply_stylesheet(app, theme='light_blue.xml', invert_secondary=True)
+        # apply_stylesheet(app, theme='light_blue.xml', invert_secondary=True)
 
         #pyqtgraph settings
         self.styles = {'color':'b', 'font-size':'20px'}
@@ -92,20 +92,21 @@ class controlApp(QtWidgets.QMainWindow):
             self.SearchCOMports()
             self.mc = MeerstetterTEC(port=self.deviceport)
             test = self.mc.get_data()
-            self.loopflag = test['loop status'][0]
-            self.ui.doubleSpinBox.setValue(test['target object temperature'][0])
+            # print(list(test.keys()))
+            self.loopflag = test['Temperature is Stable'][0]
+            self.ui.doubleSpinBox.setValue(test['Target Object Temperature'][0])
             print(self.loopflag)
             if  self.loopflag:
                 self.ui.toggle_power.setChecked(True)
             self.timer.start(250)
         except:
             print("No TEC controller connected")
-            #self.NoTECfoundPopUp()
+            self.NoTECfoundPopUp()
 
     def UpdateValues(self):
         dd = self.mc.get_data()
 
-        T = (dd['object temperature'][0])
+        T = (dd['Object Temperature'][0])
         self.tempdata = np.append(self.tempdata,T)
         if len(self.tempdata) > self.Npoints:
             self.tempdata = self.tempdata[1:]
@@ -116,7 +117,7 @@ class controlApp(QtWidgets.QMainWindow):
         elif self.ui.radioButton_K.isChecked():
             self.ui.lcdNumber_temp.display(T+273)
 
-        C = dd['output current'][0]
+        C = dd['Actual Output Current'][0]
         self.currentdata.append(C)
         if len(self.currentdata) > self.Npoints:
             self.currentdata = self.currentdata[1:]
@@ -160,7 +161,7 @@ class controlApp(QtWidgets.QMainWindow):
     def TempSwitch(self):
         radioButton = self.sender()
         test = self.mc.get_data()
-        v = test['target object temperature'][0]
+        v = test['Target Object Temperature'][0]
         if radioButton.isChecked():
             if radioButton == self.ui.radioButton_C:
                 self.ui.doubleSpinBox.setValue(v)
@@ -230,7 +231,7 @@ class MeerstetterTEC(object):
 
     def _connect(self):
         # open session
-        self._session = MeCom(serialport=self.port)
+        self._session = MeComSerial(serialport=self.port)
         # get device address
         self.address = self._session.identify()
         print("connected to {}".format(self.address))
@@ -276,7 +277,7 @@ class MeerstetterTEC(object):
         """
         value, description = (1, "on") if enable else (0, "off")
         print("set loop for channel {} to {}".format(self.channel, description))
-        return self.session().set_parameter(value=value, parameter_name="Status", address=self.address, parameter_instance=self.channel)
+        return self.session().set_parameter(value=value, parameter_name="Output Enable Status", address=self.address, parameter_instance=self.channel)
 
     def enable(self):
         return self._set_enable(True)

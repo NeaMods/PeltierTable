@@ -1,6 +1,6 @@
-numpy==1.25.2
-mecom==0.1
-pyserial==3.5
-pyqtgraph==0.13.3
-pyside6==6.5.2
+numpy<2.0.0
+# mecom==0.1
+pyserial
+pyqtgraph
+pyside6
 qtpy
